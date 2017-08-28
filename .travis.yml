@@ -21,8 +21,8 @@ script:
 - ionic plugin add phonegap-plugin-push
 - ionic build ios --device --release
 - ionic build ios --device --release
-after_success:  
-- ./scripts/package-and-upload.sh
+#after_success:  
+#- ./scripts/package-and-upload.sh
 env:  
   global:
   - APP_NAME="BOM"
@@ -30,4 +30,4 @@ env:
   - PROFILE_NAME="BOM_Dist"
   - PROFILE_UUID="ec402d53-39af-4ba7-ac73-ebfcd1169c6e"
   - DELIVER_WHAT_TO_TEST="Nueva version BOM"
-  - HOCKEYAPP_UPLOAD_BRANCH="master"
+  - HOCKEYAPP_UPLOAD_BRANCH="feature/ios-build"
