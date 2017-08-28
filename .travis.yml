@@ -28,6 +28,6 @@ env:
   - APP_NAME="BOM"
   - DEVELOPER_NAME="iPhone Distribution: Consultora Eudaimonia SRL (Z4V65GVN5Q)"
   - PROFILE_NAME="BOM_Dist"
-  - PROFILE_UUID="11111-11111-1111111-111111-11111"
+  - PROFILE_UUID="ec402d53-39af-4ba7-ac73-ebfcd1169c6e"
   - DELIVER_WHAT_TO_TEST="Nueva version BOM"
   - HOCKEYAPP_UPLOAD_BRANCH="master"
