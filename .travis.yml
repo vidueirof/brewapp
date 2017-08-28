@@ -1,15 +1,15 @@
-language: objective-c  
-os: osx  
-osx_image: xcode7.3 
-before_install:  
+language: objective-c
+os: osx
+osx_image: xcode7.3
+before_install:
 - export LANG=en_US.UTF-8
 - brew update
 - npm install -g npm@2.14.5
 - npm install -g grunt-cli cordova ionic
-before_script:  
+before_script:
 - ./scripts/decrypt-key.sh
 - ./scripts/add-key.sh
-script:  
+script:
 - npm install
 - grunt test
 - grunt pushCoverage
@@ -21,9 +21,7 @@ script:
 - ionic plugin add phonegap-plugin-push
 - ionic build ios --device --release
 - ionic build ios --device --release
-#after_success:  
-#- ./scripts/package-and-upload.sh
-env:  
+env:
   global:
   - APP_NAME="BOM"
   - DEVELOPER_NAME="iPhone Distribution: Consultora Eudaimonia SRL (Z4V65GVN5Q)"
@@ -31,3 +29,5 @@ env:
   - PROFILE_UUID="ec402d53-39af-4ba7-ac73-ebfcd1169c6e"
   - DELIVER_WHAT_TO_TEST="Nueva version BOM"
   - HOCKEYAPP_UPLOAD_BRANCH="feature/ios-build"
+  - secure: EYIH2sXbWa7luROP5+NEWrqTlgKWLcLSUxvh91fiZ2AIIlJ05Vt4EvfF8Y321jTmjuycyAmaNzZUa5I6P07KCYeR7igjKKA524UVbMHhTo0fxOru5EAeuiQz4J3onSZZ/tT9YIWO4+0bHjJBXHtae7sfh5y2xK3MBhP1Vb3ZK1ymL0MkLgC1NY3xGHaAj7Iyi9CslPngsJDPu7/+bB/CkUS2GpD9nOvxGpSIGNZGld6D5VACho6dk9gGMrCs8FMuqNWJnPX0Ay2jdnAZc/7sHC/3pmmudzjxJEQiDZxIfNvIuq0nQSxbWhBkLYcJ11e19fH85tK8bCuMz0u/b1Jd5jEpWMsdqTy5c8PrsEbflpGhzMEMp5I8wt1wuSr4FipTkEO6+Sph96WMtRwXD6EiKohUvPe+Y2KkXtl8ZKDWFilY69TTK6w27SPVMYHbWrCcthDpBpcA63MaAgQd5/uzPbG6tmhkiFSB3fSa00j5VCO4J/c7kGJ03KMrW7hYHP4C7ck18f1f8qMJOn0Oe6XrCLsHPV+Dd/cZYitCWn2rgJXRAw6FF3Se2zhtZh+w2edNdkHbFFACcy6DO184CseT9YTjheP8hmVmhM0//IMSs8lfMAtBZRq8V3zw5YTVEYmWuMgPlTstYVY/GxAKniWEhy8At6CiJI0HE8Av9fdVnUE=
+  - secure: zoqGDsvJuPA33waeiAWc7ruNxJlHXWW2zL5FJoBvkfnvRGfF3su6/xID8TzzPxx1YaIb5H8VfKf/BjVFJHlpEN3uJAAEJIUeHGf0rqymiVWADLBH6E+XodnKEN8E9aJSaoj5bZDGLGZy76sTkAgVFvSDBsbDXVecSHpRkwTgIiO0X0itGbsXzdHYg1qINhqHN5Va//osdYSmUr6NzOt2tlIdCpfyOrIIGfw+9gI/XB1sUxwwAU32VDxIbiIVEvSWLRP5Jtpc8W3i1etJ6QSS3GaygIr1KRwHZ7qHgrFa7cuKWEgLCMsjYvardrIu4ouRxi2m+wB7qEvf6qYA8KyBuFTgoYaOejS5gcBC0VGfmaXCA8/rsA9VSdto/XU3p/CMJRf/e/pUXoNcd7KT5roEFpd5iwBtwFUazBFLS9pBg4jCSxikbTdE4BywB7QCmbME4xgD93jwzbO41Cj4J5T6guAfKkwvxHMfwQn86SxLHsBvIhDR1DaC4oJF5nYomw6e5cSR+gDKWPyNWdgkObTYXEEqsuhIoEgct0l9hBXp1YNuzlrsoc1gKQEDFvs28/AgenOotxQXaqgDsioKcrWrfcko73PDtcgq8sR7stltJxuA36KobYIZCz+pN7TRjG88j16B5jSpfmh5mEIrJkMvdqnH/KQ0EQhnLjND/cAzAbM=
