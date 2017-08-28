@@ -25,17 +25,8 @@ if [[ ! -e "./scripts/certs/dist.p12.enc" ]]; then
     exit 1
 fi
 
-openssl aes-256-cbc \  
--k "$ENCRYPTION_SECRET" \
--in "./scripts/profile/$PROFILE_NAME.mobileprovision.enc" -d -a \
--out "./scripts/profile/$PROFILE_NAME.mobileprovision"
+openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in "./scripts/profile/$PROFILE_NAME.mobileprovision.enc" -d -a -out "./scripts/profile/$PROFILE_NAME.mobileprovision"
 
-openssl aes-256-cbc \  
--k "$ENCRYPTION_SECRET" \
--in "./scripts/certs/dist.cer.enc" -d -a \
--out "./scripts/certs/dist.cer"
+openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in "./scripts/certs/dist.cer.enc" -d -a -out "./scripts/certs/dist.cer"
 
-openssl aes-256-cbc \  
--k "$ENCRYPTION_SECRET" \
--in "./scripts/certs/dist.p12.enc" -d -a \
--out "./scripts/certs/dist.p12"
+openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in "./scripts/certs/dist.p12.enc" -d -a -out "./scripts/certs/dist.p12"
