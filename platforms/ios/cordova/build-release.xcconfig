@@ -22,7 +22,6 @@
 //
 
 #include "build.xcconfig"
-PROVISIONING_PROFILE = ec402d53-39af-4ba7-ac73-ebfcd1169c6e
 
-CODE_SIGN_IDENTITY = iPhone Distribution: Consultora Eudaimonia SRL (Z4V65GVN5Q)
-CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Distribution: Consultora Eudaimonia SRL (Z4V65GVN5Q)
+CODE_SIGN_IDENTITY = iPhone Distribution
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Distribution
