@@ -11,7 +11,7 @@ before_script:
 - ./scripts/add-key.sh
 script:
 - npm install
-- ionic build ios --device --release
+- ionic cordova build ios --device --release
 env:
   global:
   - APP_NAME="BOM"
