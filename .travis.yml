@@ -4,6 +4,7 @@ osx_image: xcode8.2
 before_install:
 - export LANG=en_US.UTF-8
 - brew update
+- nvm use 6.9.1
 - npm install -g grunt-cli cordova ionic
 before_script:
 - ./scripts/decrypt-key.sh
