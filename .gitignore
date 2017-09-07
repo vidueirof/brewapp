@@ -54,7 +54,7 @@ node_modules
 .tmp
 .sass-cache
 **/bower_components
-lib/**
+www/lib/**
 platforms
 plugins
 *.swp
