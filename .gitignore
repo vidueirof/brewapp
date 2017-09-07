@@ -48,3 +48,16 @@ Temporary Items
 node_modules/
 bower_components/
 www/secrets.js
+
+# Ionic
+node_modules
+.tmp
+.sass-cache
+**/bower_components
+lib/**
+platforms
+plugins
+*.swp
+*.swo
+*.log
+*.DS_Store
